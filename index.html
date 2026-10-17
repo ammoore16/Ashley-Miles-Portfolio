@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ashley Miles Moore | Nutrition & Dietetics</title>
+
+  <meta
+    name="description"
+    content="Academic and professional ePortfolio of Ashley Miles Moore, aspiring Registered Dietitian Nutritionist and M.S. Applied Nutrition candidate."
+  />
+
+  <meta name="author" content="Ashley Miles Moore" />
+
+  <style>
+    :root {
+      --bg: #f7f4ed;
+      --bg-soft: #eee8dc;
+      --surface: #fffdf8;
+      --green: #183d36;
+      --green-2: #28574d;
+      --sage: #b9c7b4;
+      --sage-light: #dfe6da;
+      --gold: #c39959;
+      --text: #1f2925;
+      --muted: #66716b;
+      --line: rgba(24, 61, 54, 0.14);
+      --white: #ffffff;
+      --max-width: 1200px;
+      --radius: 26px;
+      --shadow: 0 20px 60px rgba(26, 43, 36, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: var(--green-2);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.05;
+      color: var(--green);
+    }
+
+    h1 {
+      font-size: clamp(3.3rem, 7vw, 7rem);
+      letter-spacing: -0.055em;
+    }
+
+    h2 {
+      font-size: clamp(2.7rem, 5vw, 5.2rem);
+      letter-spacing: -0.045em;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 20px;
+      background: var(--green);
+      color: white;
+      padding: 12px 18px;
+      z-index: 9999;
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+    /* NAVIGATION */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 244, 237, 0.94);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1rem;
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--green);
+      font-size: 0.87rem;
+      font-weight: 650;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: var(--green);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      border: 1px solid var(--green);
+      border-radius: 999px;
+      padding: 10px 17px;
+    }
+
+    .nav-cta::after {
+      display: none;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: calc(100vh - 84px);
+      display: flex;
+      align-items: center;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: var(--sage-light);
+      right: -260px;
+      top: 70px;
+      opacity: 0.65;
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+    }
+
+    .hero-copy h1 span {
+      display: block;
+    }
+
+    .hero-copy h1 .italic {
+      font-style: italic;
+      color: var(--green-2);
+    }
+
+    .hero-lead {
+      max-width: 650px;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-top: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 23px;
+      border-radius: 999px;
+      border: 1px solid var(--green);
+      font-size: 0.88rem;
+      font-weight: 750;
+      transition: 0.25s ease;
+    }
+
+    .button-primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--green-2);
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      color: var(--green);
+      background: transparent;
+    }
+
+    .button-secondary:hover {
+      background: var(--surface);
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .portrait-wrap {
+      border-radius: 220px 220px 30px 30px;
+      background: var(--sage-light);
+      overflow: hidden;
+      min-height: 610px;
+      position: relative;
+    }
+
+    .portrait-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 610px;
+      object-fit: cover;
+    }
+
+    .portrait-placeholder {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--green);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(223, 230, 218, 0.85),
+          rgba(185, 199, 180, 0.65)
+        );
+      padding: 40px;
+    }
+
+    .portrait-placeholder span {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+    }
+
+    .floating-note {
+      position: absolute;
+      left: -45px;
+      bottom: 38px;
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      max-width: 250px;
+    }
+
+    .floating-note small {
+      display: block;
+      color: var(--green-2);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.66rem;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .floating-note strong {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    /* STATS */
+
+    .stats-section {
+      padding: 30px 0 100px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stat {
+      padding: 38px;
+    }
+
+    .stat + .stat {
+      border-left: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.8rem;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .stat p {
+      font-size: 0.92rem;
+    }
+
+    /* ABOUT */
+
+    section {
+      scroll-margin-top: 100px;
+    }
+
+    .section {
+      padding: 120px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 110px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+
+    .about-quote {
+      margin-top: 38px;
+      padding-left: 28px;
+      border-left: 2px solid var(--gold);
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      line-height: 1.35;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-section {
+      background: var(--green);
+      color: white;
+    }
+
+    .experience-section h2,
+    .experience-section h3 {
+      color: white;
+    }
+
+    .experience-section .eyebrow {
+      color: #c9d8cd;
+    }
+
+    .experience-section p {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin-bottom: 70px;
+    }
+
+    .section-intro p {
+      margin-top: 20px;
+      font-size: 1.05rem;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .experience-card {
+      padding: 40px 35px 45px 0;
+    }
+
+    .experience-card + .experience-card {
+      padding-left: 35px;
+      border-left: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .experience-number {
+      display: block;
+      color: #c9d8cd;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      margin-bottom: 80px;
+    }
+
+    .experience-card h3 {
+      margin-bottom: 16px;
+    }
+
+    /* SELECTED WORK */
+
+    .work-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 60px;
+    }
+
+    .work-heading h2 {
+      max-width: 700px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-visual {
+      height: 220px;
+      background: var(--sage-light);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-visual::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 1px solid rgba(24,61,54,0.18);
+    }
+
+    .project-visual::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 1px solid rgba(24,61,54,0.18);
+    }
+
+    .project-symbol {
+      position: relative;
+      z-index: 2;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 3rem;
+      color: var(--green);
+    }
+
+    .project-content {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-category {
+      color: var(--green-2);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 14px;
+    }
+
+    .project-card p {
+      font-size: 0.92rem;
+    }
+
+    .project-link {
+      margin-top: auto;
+      padding-top: 28px;
+      color: var(--green);
+      font-size: 0.87rem;
+      font-weight: 800;
+    }
+
+    .project-link span {
+      margin-left: 4px;
+      transition: margin 0.2s ease;
+    }
+
+    .project-card:hover .project-link span {
+      margin-left: 10px;
+    }
+
+    /* EXPERIENCE DETAILS */
+
+    .timeline {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 0.7fr 1fr 2fr;
+      gap: 40px;
+      padding: 38px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-date {
+      color: var(--green-2);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .timeline-place {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+    }
+
+    .timeline-description p + p {
+      margin-top: 10px;
+    }
+
+    /* VALUES */
+
+    .values-section {
+      background: var(--bg-soft);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .value-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .value {
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .value:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    .value strong {
+      display: block;
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin-bottom: 7px;
+    }
+
+    /* EDUCATION */
+
+    .education-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      padding: 50px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .education-card h3 {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      margin-bottom: 18px;
+    }
+
+    .education-meta {
+      display: grid;
+      gap: 15px;
+      border-left: 1px solid var(--line);
+      padding-left: 45px;
+    }
+
+    .education-meta span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .education-meta strong {
+      display: block;
+      color: var(--green);
+      font-size: 1.03rem;
+      margin-top: 3px;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      padding: 130px 0;
+      background: var(--green);
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 90px;
+      align-items: end;
+    }
+
+    .contact-section h2 {
+      color: white;
+      max-width: 800px;
+    }
+
+    .contact-section .eyebrow {
+      color: #c9d8cd;
+    }
+
+    .contact-section p {
+      color: rgba(255,255,255,0.7);
+      margin-top: 24px;
+      max-width: 650px;
+      font-size: 1.05rem;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-link {
+      display: block;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .contact-link:last-child {
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .contact-link small {
+      display: block;
+      color: #c9d8cd;
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .contact-link strong {
+      color: white;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #102c27;
+      color: rgba(255,255,255,0.65);
+      padding: 38px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      font-size: 0.82rem;
+    }
+
+    .footer-name {
+      color: white;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+    }
+
+    .back-top {
+      color: white;
+      font-weight: 700;
+    }
+
+    /* MOBILE */
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--green);
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .values-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero-copy {
+        max-width: none;
+      }
+
+      .hero-visual {
+        max-width: 650px;
+      }
+
+      .portrait-wrap,
+      .portrait-wrap img,
+      .portrait-placeholder {
+        min-height: 520px;
+      }
+
+      .floating-note {
+        left: 20px;
+      }
+
+      .work-grid,
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-grid {
+        border-top: 0;
+      }
+
+      .experience-card,
+      .experience-card + .experience-card {
+        padding: 35px 0;
+        border-left: 0;
+        border-top: 1px solid rgba(255,255,255,0.2);
+      }
+
+      .experience-number {
+        margin-bottom: 25px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .education-card {
+        grid-template-columns: 1fr;
+      }
+
+      .education-meta {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding: 30px 0 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(calc(100% - 30px), var(--max-width));
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 84px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 18px 25px 30px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 13px 0;
+        width: 100%;
+      }
+
+      .nav-cta {
+        border: 0;
+        border-radius: 0;
+      }
+
+      .brand-text span {
+        display: none;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 15vw, 5rem);
+      }
+
+      .hero-grid {
+        gap: 50px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat + .stat {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .stat {
+        padding: 28px 0;
+      }
+
+      .section {
+        padding: 85px 0;
+      }
+
+      .work-heading {
+        display: block;
+      }
+
+      .work-heading .button {
+        margin-top: 25px;
+      }
+
+      .education-card {
+        padding: 30px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+
+      <a class="brand" href="#top" aria-label="Ashley Miles Moore, home">
+        <div class="brand-mark">AM</div>
+        <div class="brand-text">
+          <strong>Ashley Miles Moore</strong>
+          <span>Nutrition & Dietetics</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#work">Selected work</a></li>
+          <li><a href="#resume">Résumé</a></li>
+          <li><a class="nav-cta" href="#contact">Let’s connect</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <div class="eyebrow">
+            A science-informed, people-first approach
+          </div>
+
+          <h1>
+            <span>Nutrition rooted</span>
+            <span class="italic">in science.</span>
+            <span>Care centered</span>
+            <span class="italic">on people.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Hello, I’m Ashley Miles Moore—an aspiring Registered Dietitian
+            Nutritionist committed to inclusive, evidence-based nutrition care
+            that supports both individuals and communities.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">
+              Explore my work →
+            </a>
+
+            <a class="button button-secondary" href="#about">
+              Meet Ashley
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+
+          <div class="portrait-wrap">
+
+            <!--
+              Replace this placeholder with Ashley's image:
+
+              <img
+                src="assets/ashley-miles-moore.jpg"
+                alt="Ashley Miles Moore smiling outdoors"
+              />
+            -->
+
+            <div class="portrait-placeholder">
+              <span>
+                Ashley Miles Moore
+                <br />
+                <small>Nutrition & Dietetics</small>
+              </span>
+            </div>
+
+          </div>
+
+          <div class="floating-note">
+            <small>Learning across</small>
+            <strong>
+              Colorado & Mississippi
+            </strong>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="stats-section">
+      <div class="container stats-grid">
+
+        <div class="stat">
+          <div class="stat-number">M.S.</div>
+          <p>
+            Applied Nutrition candidate at the University of New England.
+          </p>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">Dec. 2026</div>
+          <p>
+            Expected graduate degree completion.
+          </p>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">1,000+</div>
+          <p>
+            Supervised experiential learning hours expected by graduation.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div>
+          <div class="eyebrow">My approach</div>
+
+          <h2>
+            Good care begins with understanding.
+          </h2>
+        </div>
+
+        <div class="about-copy">
+
+          <p>
+            Nutrition is deeply personal. The best care recognizes the whole
+            person—their health, their circumstances, their culture, their
+            experiences, and what matters to them.
+          </p>
+
+          <p>
+            In December 2026, I expect to graduate from the University of New
+            England with a Master of Science in Applied Nutrition, Dietetics
+            Focus Area. Upon successful completion of the program, I will have
+            completed more than 1,000 hours of supervised experiential learning
+            and will be eligible to take the registration examination for
+            dietitians.
+          </p>
+
+          <p>
+            UNE’s dietetics pathway integrates graduate coursework with
+            supervised experience in clinical nutrition, community nutrition,
+            counseling, and food systems.
+          </p>
+
+          <p>
+            One of the most meaningful parts of my education has been completing
+            supervised experiential learning in both Colorado and Mississippi.
+            Training in two states introduced me to different communities,
+            health care systems, and approaches to nutrition practice.
+          </p>
+
+          <p>
+            My experiences have included acute and critical care, eating
+            disorder treatment, neurorehabilitation, WIC and public health
+            programming, school nutrition, food service management, and
+            lifestyle medicine.
+          </p>
+
+          <div class="about-quote">
+            “Meeting people where they are and making nutrition science
+            practical, respectful, and accessible.”
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EXPERIENCE OVERVIEW -->
+
+    <section class="section experience-section">
+      <div class="container">
+
+        <div class="section-intro">
+          <div class="eyebrow">
+            Experience that shapes my practice
+          </div>
+
+          <h2>
+            Different settings.
+            <br />
+            A shared commitment to care.
+          </h2>
+
+          <p>
+            Building clinical knowledge, community understanding, and
+            operational skills through hands-on learning.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+
+          <article class="experience-card">
+            <span class="experience-number">01</span>
+
+            <h3>Clinical & behavioral health</h3>
+
+            <p>
+              Acute and critical care, eating disorder treatment,
+              neurorehabilitation, medical nutrition therapy, nutrition-focused
+              physical exams, enteral nutrition, and interdisciplinary care.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="experience-number">02</span>
+
+            <h3>Community & public health</h3>
+
+            <p>
+              WIC, maternal and infant support, nutrition education, diabetes
+              education, food access initiatives, research, and
+              participant-centered public health programming.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="experience-number">03</span>
+
+            <h3>Food systems & school nutrition</h3>
+
+            <p>
+              Program planning, procurement, budgeting, food safety, allergen
+              management, menu development, staff education, and child
+              nutrition operations.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SELECTED WORK -->
+
+    <section class="section" id="work">
+      <div class="container">
+
+        <div class="work-heading">
+
+          <div>
+            <div class="eyebrow">Selected work</div>
+            <h2>Knowledge put into practice.</h2>
+          </div>
+
+          <a class="button button-secondary" href="#portfolio">
+            View portfolio
+          </a>
+
+        </div>
+
+        <div class="work-grid">
+
+          <article class="project-card">
+
+            <div class="project-visual">
+              <span class="project-symbol">B</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category">Food systems</div>
+
+              <h3>A second chance at breakfast</h3>
+
+              <p>
+                A practical proposal designed to make school breakfast more
+                accessible through a later service window and reduce barriers
+                for high school students.
+              </p>
+
+              <a class="project-link" href="#">
+                Explore project <span>→</span>
+              </a>
+            </div>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <div class="project-visual">
+              <span class="project-symbol">W</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category">Community</div>
+
+              <h3>More inclusive care in WIC</h3>
+
+              <p>
+                An environmental scan exploring weight-inclusive,
+                participant-centered approaches to nutrition services and
+                opportunities to strengthen WIC programming.
+              </p>
+
+              <a class="project-link" href="#">
+                Explore project <span>→</span>
+              </a>
+            </div>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <div class="project-visual">
+              <span class="project-symbol">T</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category">Research</div>
+
+              <h3>Maternal nutrition, made visible</h3>
+
+              <p>
+                A visual synthesis of research examining oral thiamine
+                supplementation, maternal thiamine status, breast milk
+                concentrations, and infant outcomes.
+              </p>
+
+              <a class="project-link" href="#">
+                Explore project <span>→</span>
+              </a>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EXPERIENCE DETAILS -->
+
+    <section class="section" id="experience">
+      <div class="container">
+
+        <div class="section-intro">
+          <div class="eyebrow">Supervised experiential learning</div>
+
+          <h2>
+            Learning through service,
+            practice, and collaboration.
+          </h2>
+
+          <p>
+            My training has taken place across clinical, community, public
+            health, and food systems environments in Colorado and Mississippi.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              Jan. 2026 — Present
+            </div>
+
+            <div class="timeline-place">
+              University of Mississippi Medical Center
+              <br />
+              Jackson, Mississippi
+            </div>
+
+            <div class="timeline-description">
+              <p>
+                Rotated through surgical, medical, cardiac, neurological, and
+                burn intensive care settings while building confidence in
+                complex, high-acuity nutrition care.
+              </p>
+
+              <p>
+                Conducted nutrition-focused physical exams, developed
+                individualized care plans and PES statements, interpreted
+                biochemical and anthropometric data, and calculated enteral
+                and parenteral nutrition support.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              May — Sept. 2026
+            </div>
+
+            <div class="timeline-place">
+              Rankin County School District
+              <br />
+              Office of Child Nutrition
+            </div>
+
+            <div class="timeline-description">
+              <p>
+                Worked across child nutrition operations, procurement, annual
+                budgeting, staffing, federal and state funding requirements,
+                menu standards, vendor relationships, and board proposals.
+              </p>
+
+              <p>
+                Developed a year-to-date expenditure tracking model and
+                introduced a second breakfast pilot program for Richland High
+                School.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              Jan. 2024 — Apr. 2025
+            </div>
+
+            <div class="timeline-place">
+              Adams County Health Department
+              <br />
+              Colorado
+            </div>
+
+            <div class="timeline-description">
+              <p>
+                Conducted a weight inclusivity environmental scan and supported
+                WIC initiatives, breastfeeding resources, grant planning,
+                diabetes education, community health programming, farmers
+                markets, and food access efforts.
+              </p>
+
+              <p>
+                Presented research on national WIC online ordering pilots and
+                participant-centered implementation strategies.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              July 2024
+            </div>
+
+            <div class="timeline-place">
+              Craig Hospital
+              <br />
+              Englewood, Colorado
+            </div>
+
+            <div class="timeline-description">
+              <p>
+                Provided nutrition care in an inpatient neurorehabilitation
+                environment, including patients with traumatic brain injuries
+                and spinal cord injuries.
+              </p>
+
+              <p>
+                Conducted assessments and nutrition-focused physical exams,
+                calculated enteral nutrition requirements, and developed
+                individualized interventions addressing hypermetabolism,
+                neurogenic bowel concerns, weight loss, ostomies, hydration,
+                and increased protein needs.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              Jan. — June 2024
+            </div>
+
+            <div class="timeline-place">
+              UCHealth Parkview Medical Center
+              <br />
+              Pueblo, Colorado
+            </div>
+
+            <div class="timeline-description">
+              <p>
+                Applied the Nutrition Care Process across hospital units
+                including intensive care, neuro, oncology, and rehabilitation.
+              </p>
+
+              <p>
+                Used Epic to evaluate clinical data, developed PES statements
+                and interventions, educated patients and families, and gained
+                experience with tube feeding, TPN, medication interactions,
+                and disease pathophysiology.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              Jan. — June 2024
+            </div>
+
+            <div class="timeline-place">
+              Colorado Charter School Institute
+              <br />
+              Denver, Colorado
+            </div>
+
+            <div class="timeline-description">
+              <p>
+                Developed food safety and allergen management training,
+                specialized menus for diverse dietary needs, food code
+                education, Civil Rights training, and resources covering food
+                allergies, religious dietary practices, and the USDA Food
+                Buying Guide.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              July 2023 — Sept. 2024
+            </div>
+
+            <div class="timeline-place">
+              ACUTE Center for Eating Disorders
+              <br />
+              Denver, Colorado
+            </div>
+
+            <div class="timeline-description">
+              <p>
+                Supported nutrition rehabilitation in a specialized high-acuity
+                inpatient setting serving individuals with severe eating
+                disorders and complications of malnutrition.
+              </p>
+
+              <p>
+                Collaborated with registered dietitians, nursing,
+                mental-health professionals, and the broader treatment team
+                while supporting structured meal service, food substitutions,
+                allergy management, therapeutic consistency, and safe
+                nutrition restoration.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- VALUES -->
+
+    <section class="section values-section">
+      <div class="container values-grid">
+
+        <div>
+          <div class="eyebrow">What guides my work</div>
+
+          <h2>
+            Meeting people where they are.
+          </h2>
+
+          <p style="margin-top: 25px; max-width: 550px;">
+            Nutrition care becomes more meaningful when science is paired with
+            curiosity, compassion, accessibility, and respect for the person
+            receiving care.
+          </p>
+        </div>
+
+        <div class="value-list">
+
+          <div class="value">
+            <strong>Evidence-based practice</strong>
+            <p>
+              Using current research and clinical evidence to inform thoughtful
+              nutrition recommendations.
+            </p>
+          </div>
+
+          <div class="value">
+            <strong>Person-centered care</strong>
+            <p>
+              Recognizing that effective care must reflect an individual’s
+              circumstances, goals, preferences, and lived experience.
+            </p>
+          </div>
+
+          <div class="value">
+            <strong>Inclusive communication</strong>
+            <p>
+              Translating nutrition science into language and strategies that
+              feel practical, respectful, and accessible.
+            </p>
+          </div>
+
+          <div class="value">
+            <strong>Continued curiosity</strong>
+            <p>
+              Remaining open to new research, perspectives, settings, and
+              opportunities to grow as a future dietitian.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EDUCATION / RESUME -->
+
+    <section class="section" id="resume">
+      <div class="container">
+
+        <div class="eyebrow">Education</div>
+
+        <div class="education-card">
+
+          <div>
+            <h3>
+              Master of Science in Applied Nutrition
+            </h3>
+
+            <p>
+              Dietetics Focus Area
+              <br />
+              University of New England
+            </p>
+
+            <div style="margin-top: 28px;">
+              <a
+                class="button button-primary"
+                href="assets/Ashley-Miles-Moore-Resume.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                View résumé →
+              </a>
+            </div>
+          </div>
+
+          <div class="education-meta">
+
+            <div>
+              <span>Institution</span>
+              <strong>University of New England</strong>
+            </div>
+
+            <div>
+              <span>Program</span>
+              <strong>M.S. Applied Nutrition — Dietetics Focus Area</strong>
+            </div>
+
+            <div>
+              <span>Expected graduation</span>
+              <strong>December 2026</strong>
+            </div>
+
+            <div>
+              <span>Experiential learning</span>
+              <strong>1,000+ supervised hours</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+
+        <div>
+          <div class="eyebrow">The next chapter</div>
+
+          <h2>
+            Let’s make a meaningful connection.
+          </h2>
+
+          <p>
+            I welcome conversations about nutrition, research, dietetics,
+            community health, clinical practice, and opportunities to serve
+            individuals and communities.
+          </p>
+        </div>
+
+        <div class="contact-links">
+
+          <a
+            class="contact-link"
+            href="mailto:amm1661@gmail.com"
+          >
+            <small>Email</small>
+            <strong>amm1661@gmail.com</strong>
+          </a>
+
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/ashley-miles-moore"
+            target="_blank"
+            rel="noopener"
+          >
+            <small>Professional profile</small>
+            <strong>Connect on LinkedIn ↗</strong>
+          </a>
+
+          <div class="contact-link">
+            <small>Location</small>
+            <strong>Brandon, Mississippi</strong>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container footer-inner">
+
+      <div>
+        <div class="footer-name">
+          Ashley Miles Moore
+        </div>
+
+        <div>
+          Aspiring Registered Dietitian Nutritionist
+        </div>
+      </div>
+
+      <div>
+        © 2026 Ashley Miles Moore
+        <br />
+        Academic & professional ePortfolio · Updated October 2026
+      </div>
+
+      <a class="back-top" href="#top">
+        Back to top ↑
+      </a>
+
+    </div>
+  </footer>
+
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    document.querySelectorAll("#navLinks a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+  </script>
+
+</body>
+</html>
